@@ -9,10 +9,10 @@ img.photo { padding: 2px; background: #888; border: 1px solid #cecece; border-bo
 
 ul,ol,h1,h2,h3,h4,h5,h6,p { display: block; }
 
-#w { position: relative; overflow-x: hidden; overflow-y: hidden; }
+#w { position: relative; overflow-x: hidden; overflow-y: hidden; top: 0px;}
 
 /** @group core body **/
-#w #pagebody { position: relative; left: 0; max-width: 1024px; min-width: 768px; z-index: 99999; }
+#w #pagebody { position: relative; left: 0; max-width: 1024px; min-width: 768px; z-index: 99999; top: 0px;}
 
 #w #navmenu { background: #8e181b; height: 100%; display: block; position: fixed; width: 300px; left: 0px; top: 0px; z-index: 0;  }
 
