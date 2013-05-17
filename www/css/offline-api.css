@@ -1,0 +1,17 @@
+@charset "UTF-8";
+nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+nav li {
+	display: inline;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+nav ul li a {
+	color: #F30;
+}
+#zoneW{
+	text-align:center;
+	}

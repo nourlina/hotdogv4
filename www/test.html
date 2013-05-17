@@ -1,0 +1,1359 @@
+<!doctype html>
+<!--<html manifest="doc.manifest">-->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>THE HOT DOG COMPANY</title> 
+	<meta name="author" content="Soufiane BARAKAT">
+	<meta name="description" content="Application Mobile THE HOT DOG COMPANY">
+    <meta name="keywords" content="lina solutions, dog, application, ipad">
+    <link rel="shortcut icon" href="thehotdog.png">
+	<link rel="icon" href="thehotdog.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+	
+	
+	
+	
+	  
+		
+
+
+
+<script type="text/javascript" src="js/slideinmenu.js?v=0.1b1"></script>
+
+
+	<style type="text/css" media="all">
+
+.scrollable{
+    background-color:#fff;
+    border:0px solid #777;
+    height:450px;
+    overflow:auto;
+  
+}
+
+
+#slidedownmenu {
+	position:fixed;
+	width:100%;
+	height:115px;
+	top:-115px;
+	left:0;
+	z-index:999999;
+	background:#c05500 url(drawer-bg.jpg);
+	visibility:hidden;
+}
+
+#slidedownmenu .handle {
+	-webkit-user-select:none;
+	position:absolute;
+	bottom:-28px;
+	left:0;
+	width:100%;
+	height:28px;
+	border-top:1px solid #532500;
+	border-bottom:1px solid #111;
+	background-color:#c3a57e;
+	background:url(pictures/handle.png) no-repeat 50% 50%, -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #e07b29), color-stop(0.1, #b85300), color-stop(0.8, #793600));
+	
+	
+/*	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.7);*/
+}
+
+#slidedownmenu ul {
+	display:block;
+	width:auto;
+}
+
+#slidedownmenu li {
+	display:block;
+	float:left;
+	margin:20px 10px;
+	text-align:center;
+	font-weight:bold;
+	color:#fff;
+	text-shadow:0 1px 1px #000;
+}
+
+#slidedownmenu li img {
+	display:block;
+	margin-bottom:4px;
+}
+</style>
+
+
+<script type
+<script type="text/javascript">
+var myScroll;var myScroll1;var myScroll2;var myScroll3;var myScroll4;var myScroll5;
+var myScroll6;var myScroll7;var myScroll8;var myScroll9;var myScroll10;//var myScroll11;
+var a = 0;var menu;
+function loaded() {
+	setHeight();	// Set the wrapper1 height. Not strictly needed, see setHeight() function below.
+menu = new slideInMenu('slidedownmenu', false);
+	// Please note that the following is the only line needed by iScroll to work. Everything else here is to make this demo fancier.
+	myScroll1 = new iScroll1('scroller1');
+	myScroll2 = new iScroll2('scroller2');
+	myScroll3 = new iScroll3('scroller3');
+	myScroll4 = new iScroll4('scroller4');
+	myScroll5 = new iScroll5('scroller5');
+	myScroll6 = new iScroll6('scroller6');
+	myScroll7 = new iScroll7('scroller7');
+	myScroll8 = new iScroll8('scroller8');
+	myScroll9 = new iScroll9('scroller9');
+	myScroll10 = new iScroll10('scroller10');
+	//myScroll11 = new iScroll10('scroller11');
+	myScroll = new iScroll('wrapper');
+	
+	
+}
+
+// Change wrapper1 height based on device orientation. Not strictly needed by iScroll, you may also use pure CSS techniques.
+function setHeight() {
+	var headerH = '100',
+		footerH = '100',
+		wrapper1H = window.innerHeight - headerH - footerH;wrapper1H=600;wrapper2H=500;wrapper7H=490;wrapper9H=580;wrapper10H=530;
+	document.getElementById('wrapper1').style.height = wrapper1H + 'px';
+	document.getElementById('wrapper2').style.height = wrapper2H + 'px';
+	document.getElementById('wrapper3').style.height = wrapper1H + 'px';
+	document.getElementById('wrapper4').style.height = wrapper2H + 'px';
+	document.getElementById('wrapper5').style.height = wrapper2H + 'px';
+	document.getElementById('wrapper6').style.height = wrapper1H + 'px';
+	document.getElementById('wrapper7').style.height = wrapper7H + 'px';
+	document.getElementById('wrapper8').style.height = wrapper7H + 'px';
+	document.getElementById('wrapper9').style.height = wrapper9H + 'px';
+	document.getElementById('wrapper10').style.height = wrapper10H + 'px';
+	//document.getElementById('wrapper11').style.height = wrapper9H + 'px';
+	
+}
+
+// Check screen size on orientation change
+window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', setHeight, false);
+
+// Prevent the whole screen to scroll when dragging elements outside of the scroller1 (ie:header/footer).
+// If you want to use iScroll in a portion of the screen and still be able to use the native scrolling, do *not* preventDefault on touchmove.
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+// Load iScroll when DOM content is ready.
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+
+	  
+	  
+	   <input type="hidden" id="userIds" name="userIds" size="" /><input type="hidden" id="userdog" name="userdog" size="0" />
+	</head>
+<body onload='verifuser();loae();mise();' style='background-color:#613433;'>
+<input type='hidden' id='mamafamille' value='0'>
+<input type='hidden' id='maproduit' value='0'>
+<input type='hidden' id='maprix' value='0'>
+<input type='hidden' value='' id='commande'>
+<input type='hidden' value='' id='maproduit1'>
+<input type='hidden' value='' id='maqte1'>
+<input type='hidden' value='' id='matetat1'>
+<input type='hidden' value='' id='malibelle1'>
+<input type='hidden' value='' id='maprix1'>
+<input type='hidden' value='' id='matva1'>
+<input type='hidden' value='' id='matoday'>
+<input type='hidden' value='0' id='mamaxi'>
+<input type='hidden' value='0' id='maqte2'>
+<input type='hidden' value='0' id='mareduction2'>
+<input type='hidden' value='0' id='login_passwde'>
+<input type='hidden' value='0' id='nomclientedit'>
+<input type='hidden' value='' id='nomclientauto'>
+<input type='hidden' value='0' id='somedog'>
+<input type='hidden' value='0' id='pouredog'>
+<input type='hidden' value='0' id='vendeur'>
+<input type='hidden' value='0' id='magasin'>
+<input type='hidden' value='0' id='totalremise'>
+<input type='hidden' value='1' id='secte'>
+<input type='hidden' value='0' id='mtfidelpoint'>
+<input type='hidden' id="clientpointdoglina" value="0">
+<input type='hidden' value='0' id='creditfidel'>
+<input type='hidden' value='0' id='totalfinal'>
+<input type='hidden' value='0' id='usecredit'>
+<input type='hidden' value='0' id='ptfidreste'>
+<input type='hidden' value='0' id='tototo'>
+<input type='hidden' value='0' id='fondecaisse'>
+<input type='hidden' value='0' id='ptfids'>
+<input type='hidden' id='livrez' value='2'>
+<input type='hidden' id='modepayer' value='autre'>
+<input type='hidden' value='0' id='montotalre'>
+<input type='hidden' value='0' id='matodayheure'>
+<input type='hidden' value='0' id='etatbon'>
+<input type='hidden' value='0' id='totalooo'>
+<input type='hidden' value='0' id='openss'>
+
+
+<div id="results14" style='visibility:hidden;height:0px;' ></div>
+<div style='position:fixed;z-index:99999;top:0px;height:730px;'>
+<div id="slidedownmenu">
+	<ul>
+		<li><img src="icones/reglages.png" width="59" height="60" alt="" id='poverreglage'/>R&eacute;glages</li>
+		<li><a href='#monmaps' onclick="menu.close();" style='color:white;text-decoration:none;outline:none;'><img src="icones/localiser.png" width="59" height="60" alt="" />G&eacute;olocal.</a></li>
+		<li><a href='#' onclick="menu.close();" style='color:white;text-decoration:none;outline:none;' id='povermaremise'><img src="icones/remise.png" width="59" height="60" alt="" />Remise</a></li>
+		<li><a href='#' onclick="listeremises();menu.close();" style='color:white;text-decoration:none;outline:none;' id='poverlisteremise'><img src="icones/remises.png" width="59" height="60" alt="" />Liste remise</a></li>
+		<li><a href='#caisses' onclick="menu.close();" style='color:white;text-decoration:none;outline:none;'><img src="icones/caisse.png" width="59" height="60" alt="" />Caisse</a></li>
+		<li><a href='#caisses' onclick="menu.close();" style='color:white;text-decoration:none;outline:none;' id='poverticket' ><img src="icones/ticket.png" width="59" height="60" alt="" />Ticket</a></li>
+	</ul>
+	<div class="handle"><div align='center' style='padding-top:3px;'><img src='pictures/handle.png' onclick='opens()' /></div></div>
+</div>
+<div style='visibility:hidden;'>
+<div id='header2' >Remise</div> 
+    <div id='content2'>
+		<div style='text-align:center;font-size:13px;padding-top:20px;font-family:arial' align='center'>
+			 <table  cellspacing='0' border='0' style='width:400px;font-size:16px;'>
+		
+		
+		<tr>
+			<td align='center' ><input type="number" name="montantreduction" id="montantreduction" value="0" style='width:300px;text-align:center;font-size:50px;height:80px;color:#000'  ></td>
+		</tr>
+		<tr><td ></td>
+		</tr>
+		<tr>
+			<td align='center' ><select name="pourcentagereduction" id="pourcentagereduction"  style='width:300px;text-align:center;font-size:50px;height:80px;color:#2d0909'></select></td>
+		</tr>
+		<tr><td >&nbsp;</td></tr>
+		<tr>
+			<td valign='top' style='padding-top:4px;' align='center' colspan='3'><a class="super button18 pink" href='javascript:maremisey()' style='color:#fff;font-size:22px;font-weight:bold'>ENREGISTRER</a></td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td align='right' colspan='3'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#povermaremise");'/></td>
+		</tr>
+	</table>		
+		</div>	
+    </div> 
+	
+	<div id='header3' >Ajouter Nouveau client</div> 
+    <div id='content3'>
+		<div style='text-align:center;font-size:13px;padding-top:20px;font-family:arial' align='center'>
+			<table  cellspacing='10' border='0' width='95%'>
+		<tr>
+			<td  align='center' colspan='2'><select id='sexeclient' style='height:35px;width:350px'><option value='0'>Mlle</option><option value='1'>MMe</option><option value='2'>Mr</option></select></td>
+		</tr>
+		<tr>
+			<td  align='center' colspan='2'><select id='magasinclient' style='height:35px;width:350px'></select></td>
+		</tr>
+		<tr>
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="text" name="nomclient" id="nomclient" placeholder="Nom Client" required></td>
+		</tr>
+		<tr>
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="text" name="prenomclient" id="prenomclient" placeholder="Pr&eacute;nom Client" required></td>
+		</tr>
+		<tr>
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="number" name="codeclient" id="codeclient" placeholder="Code Client" required></td>
+		</tr>
+		<tr>	
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="email" name="emailclient" id="emailclient" placeholder="Adresse E-Mail" ></td>
+		</tr>
+		<tr>
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="number" name="phoneclient" id="phoneclient" placeholder="T&eacute;l&eacute;phone" ></td>
+		</tr>
+		<tr>
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="text" name="adresseclient" id="adresseclient" placeholder="Adresse" style='width:400px;'></td>
+		</tr>
+		<tr>
+			<td align='center' colspan='2'><input style='height:35px;width:350px' type="date" name="dateclient" style='height:35px;' id="dateclient" value="1990-01-01" ></td>
+		</tr>
+		<tr>
+			<td valign='top' style='padding-top:4px;' align='center'><a class="super button16 pink" href="javascript:newclient()" style='color:#000;'>Enregistrer</a></td>
+			<td align='right' ><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#poverclientnew");'/></td>
+		</tr>
+		
+	</table>		
+		</div>	
+    </div>
+	
+	
+	 <div id='header4' >Liste des clients</div> 
+    <div id='content4'>
+		<div style='text-align:center;font-size:13px;padding-top:20px;font-family:arial' align='center'>
+		<div style='clear:both;padding-top:15px;padding-bottom:15px;' align='center'>
+		
+		<div style='width:800px;clear:both;'>
+			<div style='width:600px;float:left' align='right'><input type=search results=5 id='search1' name='search1'  placeholder=Search... autosave=unique style='width:400px;'></div>
+			<div style='width:180px;padding-left:20px;padding-top:5px;float:left' align='left'><img src='icones/search.png' style='border:0px;height:32px' onclick='searchclient()'> </div>
+		</div>
+		</div>
+     <div style='padding-left:10px;font-size:13px;padding-top:20px;clear:both;font-family:arial' id='mesclientbis'></div>
+
+		</div>
+		<div style='width:750px;' align='right'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#poverclients");'/></div>
+    </div>
+	
+	
+	 <div id='header5' >Ticket de caisse</div> 
+    <div id='content5'>
+		<div id="wrapper1">
+			<div id="scroller1">
+				<div id='ticketcaisse'>&nbsp;</div>
+				<div style='width:100%' align='right'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#poverticket");'/></div>
+			</div>
+		</div>
+		
+		
+    </div>
+
+
+
+
+	<div id='header6' >Paiement avanc&eacute;e</div> 
+    <div id='content6'>
+		<table  cellspacing='8' border='0' style='width:600px;font-size:16px;'>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td colspan='3' align='center' id='nosetatsencaissements'>
+				
+			</td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>		
+		<tr>
+			<td align='center' width='33%'><b>Encaissement N&deg;</b><br /><input type="number" name="neencais" id="neencais" value="" style='width:200px;text-align:center;font-size:22px;height:40px;' readonly></td>
+			<td align='center' width='33%'><b>Date</b><br /><input type="date" name="dateeencais" id="dateeencais" value="" style='width:200px;text-align:center;font-size:22px;height:40px;'></td>
+			<td align='center' width='33%'><b>Code Client</b><br /><input type="text" name="clienteencais" id="clienteencais" value="" style='width:200px;text-align:center;font-size:22px;height:40px;' readonly></td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td align='center' ><b>Montant du</b><br /><input type="text" name="duencais" id="duencais" value="0.00" style='width:200px;text-align:center;font-size:22px;height:40px;' readonly></td>
+			<td align='center' ><b>Montant encaiss&eacute;</b><br /><input type="text" name="encais" id="encais" value="0.00" style='width:200px;text-align:center;font-size:22px;height:40px;' readonly></td>
+			<td align='center'><b>Solde</b><br /><input type="text" name="soldeencais" id="soldeencais" value="0.00" style='width:200px;text-align:center;font-size:22px;height:40px;' readonly></td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td align='center' ><b>Mode de Livraison</b><br /><select name='mdlivrer' id='mdlivrer' style='width:200px;height:40px;text-align:center;font-size:22px;height:40px;'><option value='1'>A emporter</option><option value='2' selected>Sur place</option></td>
+			<td align='center' ><b>Mode de Paiement</b><br /><select name='mdpencais' id='mdpencais' style='width:200px;height:40px;text-align:center;font-size:18px;'></select></td>			
+			<td align='center'><b>Montant</b><br /><input type="number" name="montantencais" id="montantencais" value="0.00" style='width:200px;text-align:center;font-size:22px;height:40px;'></td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;<input type='hidden' id='totaleencais'></td></tr>
+		
+		<tr>
+			<td valign='top' style='padding-top:4px;' align='center' colspan='3' id='valide2'><a class="super button17 pink" href="javascript:validerpaye(0,'autre','emp')"  style='color:#fff;font-size:30px;font-weight:bold'>VALIDER CE PAIEMENT</a></td>
+		</tr>
+		<tr>
+			<td align='right' colspan='3'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#poverpayeravancer");'/></td>
+		</tr>
+	</table>
+		
+    </div>
+	
+	 
+	<div id='header7' >Liste des Remises</div> 
+    <div id='content7'>
+		 <div id='listeremise'>		
+			<div style='padding-left:10px;font-size:13px;padding-top:10px;padding-bottom:10px;clear:both;font-family:arial' id='mesremisesbis'></div>
+			<div style='width:100%' align='right'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#poverlisteremise");'/></div>
+		</div>
+    </div>
+	
+	
+	<div id='header8' >Paiement ESPECES</div> 
+    <div id='content8'>
+	<input type='hidden' name='etatregle' id='etatregle' value='0'>
+		<table  cellspacing='8' border='0' style='width:730px;font-size:16px;'>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td colspan='3' align='center'>
+				<div style='width:15px;float:left;'>&nbsp;</div>
+				<div style='width:75px;float:left;'><p style='width:75px;height:40px;'><a class="super monaie pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(0,5)'>5.00</a></p></div>
+				<div style='width:20px;float:left;'>&nbsp;</div>
+				<div style='width:100px;float:left;'><p style='width:100px;height:40px;'><a class="super monaies pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(0,10)'>10.00</a></p></div>
+				<div style='width:15px;float:left;'>&nbsp;</div>
+				<div style='width:100px;float:left;'><p style='width:100px;height:40px;'><a class="super monaies pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(0,20)'>20.00</a></p></div>
+				<div style='width:15px;float:left;'>&nbsp;</div>
+				<div style='width:100px;float:left;'><p style='width:100px;height:40px;'><a class="super monaies pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(0,50)'>50.00</a></p></div>
+				<div style='width:15px;float:left;'>&nbsp;</div>
+				<div style='width:120px;float:left;'><p style='width:120px;height:40px;'><a class="super monaiess pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(0,100)'>100.00</a></p></div>
+				<div style='width:15px;float:left;'>&nbsp;</div>
+				<div style='width:120px;float:left;'><p style='width:120px;height:40px;'><a class="super monaiess pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(0,200)'>200.00</a></p></div>
+				
+			</td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>		
+		<tr>
+			<td colspan='2' style='width:470px;'>
+				<div style='width::470px;clear:both;height:70px;'>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,9)' >9</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,8)'>8</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,7)'>7</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:140px;float:left;'><p style='width:140px;height:40px;' id='dudus'>&nbsp;</p></div>
+				</div>
+				<div style='width::470px;clear:both;height:70px;'>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,6)'>6</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,5)'>5</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,4)'>4</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<!--<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:30px;font-weight:bold;color:#000;letter-spacing:5px;' >-</a></p></div>-->
+				</div>
+				<div style='width::470px;clear:both;height:70px;'>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,3)'>3</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,2)'>2</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,1)'>1</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<!--<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:30px;font-weight:bold;color:#000;letter-spacing:5px;' >X</a></p></div>-->
+				</div>
+				<div style='width::470px;clear:both;height:70px;'>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(1,0)'>0</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(2,".")'>.</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:24px;font-weight:bold;color:#000;letter-spacing:5px;' onclick='regler(3,111)'>C</a></p></div>
+					<div style='width:15px;float:left;'>&nbsp;</div>
+					<!--<div style='width:55px;float:left;'><p style='width:55px;height:40px;'><a class="super monai pink" href="#" style='font-size:30px;font-weight:bold;color:#000;letter-spacing:5px;' >%</a></p></div>-->
+				</div>
+			
+			</td>
+			<td style='width:250px;background-color:none;text-align:center' valign='top'>Montant du<br /><center><input type="text" name="montantdus" id="montantdus" value="0" style='width:300px;text-align:center;font-size:35px;height:60px;color:#000'  ></center><br />Montant encaiss&eacute;<br /><center><input type="text" name="montantencaie" id="montantencaie" value="0.00" style='width:300px;text-align:center;font-size:35px;height:60px;color:#000'  ></center><br /><div id='valide1'><a class="super button12 pink" href="javascript:regler(0,0);validerpaye(0,'esp','emp')"  style='color:#fff;font-size:18px;font-weight:bold'>VALIDER CE PAIEMENT</a></div>
+			
+			
+			
+			
+			</td>
+			
+		</tr>
+		
+		
+		
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td align='right' colspan='3'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#poverespeces");'/></td>
+		</tr>
+	</table>
+		
+    </div>
+	
+	
+	
+	<div id='header9' >Carte de fid&eacute;lit&eacute;</div> 
+    <div id='content9'>
+		<table  cellspacing='8' border='0' style='width:600px;font-size:16px;'>
+		<tr><td colspan='4'>&nbsp;</td></tr>		
+		<tr>
+			<td align='center' width='45%'><b>N&deg; de la carte</b><br /><input type="number" name="ncartef" id="ncartef" value="1" onfocus="if(this.value=='1') this.value='';" onblur="if(this.value=='') this.value='1';" style='width:250px;text-align:center;font-size:22px;height:40px;' ></td>
+			<td style='width:10%'>&nbsp;</td>
+			<td align='center' width='20%' colspan='2'><a class="super vc pink" href="javascript:verifiercf(0)"  style='color:#fff;font-size:24px;font-weight:bold'>V / A</a></td>			
+			<td align='center' width='25%'><a class="super button17a pink" href="javascript:validercf()"  style='color:#fff;font-size:18px;font-weight:bold;letter-spacing:5'>VALIDER LA CARTE </a></td>
+		</tr>
+		<tr><td colspan='5'>&nbsp;</td></tr>
+		<tr>
+			<td colspan='5' id='clientfidele'>
+				&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td align='right' colspan='5'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#fidelite");'/></td>
+		</tr>
+			
+	</table>		
+    </div>
+	
+	
+	
+	<div id='header10' >Recharger une Carte de fid&eacute;lit&eacute;</div> 
+    <div id='content10'>
+		<!--<table  cellspacing='8' border='0' style='width:600px;font-size:16px;'>
+		<tr><td colspan='4'>&nbsp;</td></tr>		
+		<tr>
+			<td align='center' width='25%'><b>N&deg; de la carte</b><br /><input type="number" name="ncarteff" id="ncarteff" value="1" onfocus="if(this.value=='1') this.value='';" onblur="if(this.value=='') this.value='1';" style='width:150px;text-align:center;font-size:22px;height:40px;' ></td>
+			<td style='width:10%'>&nbsp;</td>		
+			<td align='center' width='30%'><select name='mdpencaiss' id='mdpencaiss' style='width:200px;height:40px;text-align:center;font-size:18px;'></select></td>
+			<td align='center' width='35%' colspan='2'><a class="super rch pink" href="javascript:rechargercf(0)"  style='color:#fff;font-size:18px;font-weight:bold'>RECHARGER VOTRE CF</a></td>
+		</tr>
+		<tr><td colspan='4'>&nbsp;</td></tr>
+		<tr>
+			<td colspan='4' id='clientfidelere'>
+				&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td align='right' colspan='4'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#rechargefidelite");'/></td>
+		</tr>		
+	</table>-->	
+    </div>
+	
+	
+
+	</div>
+	
+
+<div style='visibility:visible;height:auto;width:auto;' id='bloc1'>
+
+			<div id="sds-login-dialog-form" >
+
+				<div id="login-form" class="x-plain-body">
+					
+					<div id="sds-logo" style='height:150px;text-align:center'><img src="pictures/thehotdog.png" alt="THE HOT DOG COMPANY"  /></div>
+					
+					<p class="username">
+						<input type="text" id="login_username" name="login_username" placeholder="utilisateur" />
+					</p>
+					<p class="passwd">
+						<input type="password" id="login_passwd" name="login_passwd" placeholder="Mot de passe" />
+					</p>
+					
+					
+					<p class="login" >
+						<input type="submit" id="login_submit" onclick="connecthome();" data-transition="flip" value="Connexion" />
+					</p>
+					<p class="mahome" id='mahome' style='width:300px;font-size:11px;color:red;font-weight:bold;font-family:arial;text-align:center'>
+						&nbsp;
+					</p>
+					
+				</div>
+				
+			</div>
+
+
+</div>
+<div style='visibility:hidden;height:0px;' id='bloc2'>
+
+	
+	
+	
+	
+	<div id="w">		
+		<div id="pagebody">
+			<header id="toolbarnav">
+				<a href="#navmenu" id="menu-btn"></a>			
+				<h1><font color='#fcb614'>THE HOT DOG COMPANY</font></h1>
+			</header>
+			
+			
+				<section id="content" class="clearfix" style="width:1024px;background-color:#7f1619;height:630px;">
+				
+					 
+	  <a href="#" class="overlay" id="reductions"></a>
+        <div class="popup" style=' background-color:#000;'>
+		 <div id='reduction'>
+		
+<div style='text-align:center;font-size:24px;font-family:arial;clear:both;width:100%;height:40px;color:#fcb614; '>Modifier l'article</div>
+     <div style='padding-left:10px;font-size:13px;padding-top:20px;font-family:arial;background-color:#e4e1d7;-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;width:400px;'>
+	  <table  cellspacing='16' border='0' style='width:400px;font-size:16px;'>
+		
+		
+		<tr>
+			<td align='center' width='33%'><input type="text" name="plusarticle" id="plusarticle" value="-" style='width:80px;text-align:center;font-size:50px;height:80px;color:#000' onclick='adproduit(-1);' readonly></td>
+			<td align='center' width='34%'><input type="number" name="idarticle" id="idarticle" value="1" style='width:80px;text-align:center;font-size:50px;height:80px;color:#2d0909' readonly></td>
+			<td align='center' width='33%'><input type="text" name="moinsarticle" id="moinsarticle" value="+" style='width:80px;text-align:center;font-size:50px;height:80px;' onclick='adproduit(1);' readonly></td>
+		</tr>
+		<tr><td colspan='3'>
+			<input value='0' type='hidden' id='prixarticle'>
+			<input value='0' type='hidden' id='idarticles'>
+			<input value='0' type='hidden' id='produitarticle'>
+			</td>
+		</tr>
+		<tr>
+			<td align='center' colspan='3'><select name="reductionarticle" id="reductionarticle"  style='width:200px;text-align:center;font-size:50px;height:80px;color:#2d0909'></select></td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+		<tr>
+			<td valign='top' style='padding-top:4px;' align='center' colspan='3'><a class="super button18 pink" href='javascript:editproduit()' style='color:#fff;font-size:22px;font-weight:bold'>ENREGISTRER</a></td>
+		</tr>
+		<tr><td colspan='3'>&nbsp;</td></tr>
+	</table>
+			
+	</div><a class="closeaa" id="closeaa" href="#" style='color:white;'>&nbsp;&nbsp;</a>
+	</div>
+        </div>
+		
+		
+		
+		<a href="#" class="overlay" id="monmaps"></a>
+        <div class="popup" style=' background-color:#fff;'>
+		 <div id='monmap'>
+		<div id="googleMap" style='width:600px;height:400px;'>Google MAP : G&eacute;olocalisation</div><a class="mapa" id='mapa' href="#" style='color:red;'>&nbsp;&nbsp;</a>
+	</div>
+        </div>
+		
+		
+		<a href="#" class="overlay" id="ticketvente1s"></a>
+        <div class="popup" style=' background-color:#fff;'>
+		<div  id='ticketvente1'>
+		<div id='infovente'>infovente</div><a class="mapas" href="#" >&nbsp;&nbsp;</a>
+	</div>
+        </div>
+		
+		
+		<a href="#" class="overlay" id="infoproduitbts"></a>
+        <div class="popup" style=' background-color:#fff;'>
+		<div  id='infoproduitbt1'>
+		<div id='infoproduitbt'>infoproduit</div><a class="mapas" href="#" >&nbsp;&nbsp;</a>
+	</div>
+        </div>
+		
+		
+		
+		<a href="#" class="overlay" id="ticketvente2s"></a>
+        <div class="popup" style=' background-color:#fff;'>
+		<div id="wrapper3">
+			<div id="scroller3"><div style='height:800px;' id='ticketvente2'>
+		<div id='ticketvente'></div></div></div><a class="mapas" href="#" >&nbsp;&nbsp;</a>
+	</div>
+        </div>
+		
+		
+		<a href="#" class="overlay" id="ticketvente3s"></a>
+        <div class="popup" style=' background-color:#fff;'>
+		<div id="wrapper6">
+			<div id="scroller6">
+			<div  style='height:800px;' id='ticketvente3'>
+		<div id='clientvente'>&nbsp;</div></div></div><a class="mapas" href="#" >&nbsp;&nbsp;</a>
+	</div>
+        </div>
+		
+	
+		
+		
+		  <a href="#" class="overlay" id="editclients"></a>
+        <div class="popup">
+		 <div id='client'>
+		
+
+     <div style='padding-left:10px;font-size:13px;padding-top:20px;font-family:arial'>
+	  <table  cellspacing='8' border='0'>
+		<tr>
+			<td  align='center'><select name='sexeclients' id='sexeclients' style='height:35px;'></select></td>
+		</tr>
+		<tr>
+			<td  align='center' ><select id='magasinclients' style='height:35px;'></select></td>
+		</tr>
+		<tr>
+			<td align='center'><input type="text" name="nomclients" id="nomclients" placeholder="Nom Client" required></td>
+		</tr>
+		<tr>
+			<td align='center'><input type="text" name="prenomclients" id="prenomclients" placeholder="Pr&eacute;nom Client" required></td>
+		</tr>
+		<tr>	
+			<td align='center'><input type="email" name="emailclients" id="emailclients" placeholder="Adresse E-Mail" ></td>
+		</tr>
+		<tr>
+			<td align='center'><input type="number" name="phoneclients" id="phoneclients" placeholder="T&eacute;l&eacute;phone" ></td>
+		</tr>
+		<tr>
+			<td align='center' ><input type="text" name="adresseclients" id="adresseclients" placeholder="Adresse" style='width:400px;'></td>
+		</tr>
+		<tr>
+			<td align='center'><input type="date" name="dateclients" style='height:35px;' id="dateclients" value="1990-01-01" ></td>
+		</tr>
+		<tr>
+			<td valign='top' style='padding-top:4px;' align='center'><a class="super button16 pink" href="javascript:neweditclient()" style='color:#000;'>Enregistrer</a></td>
+		</tr>
+	</table>
+		
+	</div><a class="close" id='closes' href="#" style='color:red;'>&nbsp;&nbsp;</a><a class="titress" href="" >&nbsp;&nbsp;</a>
+</div>
+        </div>
+		
+		
+
+  <a href="#" class="overlay" id="calculatrices"></a>
+        <div class="popup">
+
+        <table class="calculatrice" id="calc">
+            <tr>
+                <td colspan="4" class="calc_td_resultat">
+                    <input type="text" readonly="readonly" value="" name="calc_resultat" id="calc_resultat" class="calc_resultat" onkeydown="javascript:key_detect_calc('calc',event);" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="CE" onclick="javascript:f_calc('calc','ce');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&larr;" onclick="javascript:f_calc('calc','nbs');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="%" onclick="javascript:f_calc('calc','%');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="+" onclick="javascript:f_calc('calc','+');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="7" onclick="javascript:add_calc('calc',7);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="8" onclick="javascript:add_calc('calc',8);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="9" onclick="javascript:add_calc('calc',9);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="-" onclick="javascript:f_calc('calc','-');" />
+                </td>
+            </tr>
+                        <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="4" onclick="javascript:add_calc('calc',4);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="5" onclick="javascript:add_calc('calc',5);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="6" onclick="javascript:add_calc('calc',6);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="x" onclick="javascript:f_calc('calc','*');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="1" onclick="javascript:add_calc('calc',1);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="2" onclick="javascript:add_calc('calc',2);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="3" onclick="javascript:add_calc('calc',3);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&divide;" onclick="javascript:f_calc('calc','/');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="0" onclick="javascript:add_calc('calc',0);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&plusmn;" onclick="javascript:f_calc('calc','+-');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="," onclick="javascript:add_calc('calc','.');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="=" onclick="javascript:f_calc('calc','=');" />
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+                document.getElementById('calc').onload=initialiser_calc('calc');
+        </script>
+    
+
+            <center>
+			
+				<p style='width:135px;height:50px;padding-top:20px;'><a class="super button14 pink" href="#" style='color:#fff;font-size:30px;'>Fermer</a></p>
+				
+				</center>
+        </div>
+		
+		
+		<div id='section2' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section20'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:18px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section200'>&nbsp;&nbsp;&nbsp;Liste des ventes<br /><br />
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="0" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:8%;" class="texte7">N&deg; Vente</td><td style="width:15%;" class="texte7">Vendeur</td><td style="width:12%;" class="texte7">Magasin</td><td style="width:15%;" class="texte7">Client</td><td style="width:20%;" class="texte7">Date Cr&eacute;ation</td><td style="width:10%;" class="texte7">Montant</td><td style="width:20%;" class="texte7">&nbsp;</td></tr></table>
+					<div id="wrapper2">
+			<div id="scroller2">
+				<div style='height:auto;visibility:visible' id='scroller22'>				
+				</div>
+			</div>
+		</div><br /><br />	</div>
+				</div>
+		</div>
+		
+		
+		<div id='section3' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section30'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:18px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section300'>&nbsp;&nbsp;&nbsp;Liste des produits<br /><br />
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="0" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:25%;" class="texte7">D&eacute;signation</td><td style="width:20%;" class="texte7">Famille</td><td style="width:15%;" class="texte7">Prix</td><td style="width:10%;" class="texte7">TVA(SP)</td><td style="width:10%;" class="texte7">TVA(EP)</td><td style="width:10%;" class="texte7">Ordre</td><td style="width:10%;" class="texte7">&nbsp;</td></tr></table>
+					<div id="wrapper4">
+			<div id="scroller4">
+				<div style='height:auto;visibility:visible' id='scroller44'>				
+				</div>
+			</div>
+		</div><br /><br />	</div>
+				</div>
+		</div>
+		
+		
+		<div id='section4' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section40'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:18px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section400'>&nbsp;&nbsp;&nbsp;Commandes en ligne<br /><br />
+					<br /><br />	</div>
+				</div>
+		</div>
+		
+		
+		<div id='section5' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section50'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:18px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section500'>&nbsp;&nbsp;&nbsp;Acc&egrave;s G&eacute;olocalisation<br /><br />
+					<center><table  cellspacing='8' border='0' style='width:800px;font-size:16px;'>
+		<tr><td colspan='2'>&nbsp;</td></tr>		
+		<tr>
+			<td align='left' width='65%'><b>Informations Lieu</b><br /><textarea name="lieucharriot" id="lieucharriot" style='width:600px;text-align:left;font-size:22px;height:300px;' ></textarea></td>
+			<td align='center' width='35%'  valign='bottom'><a class="super rch pink" href="javascript:rechargercfX(0)"  style='color:#fff;font-size:20px;font-weight:bold;letter-spacing:2px;'>ENVOYER</a></td>
+		</tr>
+		<tr><td colspan='4'>&nbsp;</td></tr>
+		
+		
+	</table></center>
+	
+	
+					<br /><br />	
+					
+					
+					</div>
+				</div>
+		</div>
+		
+		
+		<div id='section6' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section60'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:18px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section600'>&nbsp;&nbsp;&nbsp;Liste des clients<br /><br />
+					
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="0" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:10%;" class="texte7">Code</td><td style="width:20%;" class="texte7">Nom</td><td style="width:20%;" class="texte7">Pr&eacute;nom</td><td style="width:5%;" class="texte7">Sexe</td><td style="width:10%;" class="texte7">Email</td><td style="width:10%;" class="texte7">T&eacute;l.</td><td style="width:10%;" class="texte7">Naissance</td><td style="width:10%;" class="texte7">Cr&eacute;dit</td><td style="width:5%;" class="texte7">&nbsp;</td></tr></table>
+					<div id="wrapper5">
+			<div id="scroller5">
+				<div style='height:auto;visibility:visible' id='scroller55'>				
+				</div>
+			</div>
+			
+			
+			
+					<br /><br />	</div>
+				</div>
+		</div>
+		</div>
+		
+		
+		<div id='section7' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section70'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:18px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section700'>&nbsp;&nbsp;&nbsp;Recharger votre carte de fid&eacute;lit&eacute;<br /><br />
+					<center><table  cellspacing='8' border='0' style='width:800px;font-size:16px;'>
+		<tr><td colspan='4'>&nbsp;</td></tr>		
+		<tr>
+			<td align='center' width='25%'><b>N&deg; de la carte</b><br /><input type="number" name="ncarteff" id="ncarteff" value="1" onfocus="if(this.value=='1') this.value='';" onblur="if(this.value=='') this.value='1';" style='width:250px;text-align:center;font-size:22px;height:40px;' ></td>
+			<td style='width:10%'>&nbsp;</td>		
+			<td align='center' width='30%'><select name='mdpencaiss' id='mdpencaiss' style='width:200px;height:40px;text-align:center;font-size:18px;'></select></td>
+			<td align='center' width='35%' colspan='2'><a class="super rch pink" href="javascript:rechargercf(0)"  style='color:#fff;font-size:20px;font-weight:bold;letter-spacing:1px;'>VERIFIER VOTRE CF</a></td>
+		</tr>
+		<tr><td colspan='4'>&nbsp;</td></tr>
+		<tr>
+			<td colspan='4' id='clientfidelere'>
+				&nbsp;
+			</td>
+		</tr>
+		
+	</table></center>
+	
+	
+					<br /><br />	</div>
+				</div>
+		</div>
+		
+		
+		
+		
+		<div id='section8' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section80'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:28px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section800'>
+						<table style='width:94%'>
+							<tr>
+								<td style='width:30%;font-size:22px;font-weight:bold;text-align:left;padding-left:20px;visibily:hidden;height:0px;' align='left' valign='middle'>SAISI DES ENTREES</td>
+								<td style='width:35%' align='left'><select name="listfournisseur" id="listfournisseur"  style='width:300px;text-align:center;font-size:20px;height:30px;color:#2d0909' onchange='produitfournisseur(this.value);'></select></td>
+								<td align='center' width='15%' ><a class="super vc pink" href="javascript:calculertableau1()"  style='color:#fff;font-size:24px;font-weight:bold'>CALC</a></td>			
+								<td align='center' width='20%'><a class="super button17a pink" href="javascript:validertableau1();showRecords3s();"  style='color:#fff;font-size:24px;font-weight:bold;letter-spacing:5'>VALIDER</a></td>
+							</tr>
+						</table>
+						<br />
+					
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="1" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:35%;" class="texte7">Nom du produit</td><td style="width:8%;" class="texte7">Qt&eacute; actu.</td><td style="width:10%;" class="texte7">Quantit&eacute;</td><td style="width:8%;" class="texte7">Unit&eacute;</td><td style="width:8%;" class="texte7">Prix</td><td style="width:18%;" class="texte7">Total</td></tr></table>
+					<div id="wrapper7">
+			<div id="scroller7">		
+				<div style='height:auto;visibility:visible' id='scroller77'>
+					
+				</div>
+			</div>
+	<br /><br />	</div>
+				</div>
+		</div>
+		</div>
+		
+		
+				<div id='section9' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section90'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:28px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section900'>
+						<table style='width:94%'>
+							<tr>
+								<td style='width:30%;font-size:22px;font-weight:bold;text-align:left;padding-left:20px;visibily:hidden;height:0px;' align='left' valign='middle' id='boes'></td>
+								<td align='center' width='15%' ><select name="statutstock" id="statutstock"  style='width:100px;text-align:center;font-size:20px;height:30px;color:#2d0909'><option value='0' selected>Stock</option><option value='1'>Annexe</option><option value='2'>Perte</option></select></td>
+								<td style='width:35%' align='left'><select name="listmagasin" id="listmagasin"  style='width:300px;text-align:center;font-size:20px;height:30px;color:#2d0909' onchange='produitmagasin(this.value);'></select></td>											
+								<td align='center' width='20%'><a class="super button17a pink" href="javascript:validertableau2();showRecords4s();"  style='color:#fff;font-size:24px;font-weight:bold;letter-spacing:5'>VALIDER</a></td>
+							</tr>
+						</table>
+						<br />
+					
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="1" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:40%;" class="texte7">Nom du produit</td><td style="width:20%;" class="texte7">Taille</td><td style="width:20%;" class="texte7">Unit&eacute;&nbsp;/&nbsp;Quantit&eacute;</td><td style="width:20%;" class="texte7">Qt&eacute; sortie</td></tr></table>
+					<div id="wrapper8">
+			<div id="scroller8">		
+				<div style='height:auto;visibility:visible' id='scroller88'>
+					
+				</div>
+			</div>
+	<br /><br />	</div>
+				</div>
+		</div>
+		</div>
+		
+		
+		<div id='section10' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section100'>
+					<div style='clear:both;height:10px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:28px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section1000'>
+						<table style='width:94%'>
+							<tr>
+								<td style='width:70%;font-size:22px;font-weight:bold;text-align:left;padding-left:20px;visibily:hidden;height:0px;' align='left' valign='middle' id='monmagapx'>Stock Magasin : </td>
+								<td align='center' width='30%' ><select name="typsoks" id="typsoks"  style='width:300px;text-align:center;font-size:20px;height:30px;color:#2d0909' onchange="typsokss(this.value)"><option value='0'>Produits Bruts & Transform&eacute;s</option><option value='1'>Produits HOT DOG</option></select></td>
+							</tr>
+						</table>
+						
+					<div style='overflow:hidden;height:0px;' id='tabame1'>
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="1" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:40%;" class="texte7">Produit</td><td style="width:10%;" class="texte7">Taille</td><td style="width:10%;" class="texte7">Qt&eacute; entr&eacute;e</td><td style='width:10%' class='texte7'>T X Q</td><td style="width:15%;" class="texte7">Taille Portion</td><td style="width:15%;" class="texte7">Nbre Portion</td></tr></table></div>
+					
+					
+							
+					<div id="wrapper9">
+			<div id="scroller9">		
+				<div style='height:auto;visibility:visible' id='scroller99'>
+					
+				</div>
+			</div>
+	<br /><br />	</div>
+				</div>
+		</div>
+		</div>
+		
+		
+		<div id='section11' style='visibily:hidden;height:0px;display: block;'>
+				<div style='padding-left:10px;padding-right:50px;visibily:hidden;height:0px;' id='section110'>
+					<div style='clear:both;height:50px;'>&nbsp;</div>
+					<div style='width:940px;background-color:white;color:black;font-size:28px;font-weight:bold;text-align:left;padding-top:20px;padding-left:20px;visibily:hidden;height:0px;' id='section1100'>
+						<table style='width:94%'>
+							<tr>
+								<td style='width:70%;font-size:22px;font-weight:bold;text-align:left;padding-left:20px;visibily:hidden;height:0px;' align='left' valign='middle'>STOCK PRINCIPAL</td>
+								<td align='center' width='30%' ><select name="typsokss" id="typsokss"  style='width:300px;text-align:center;font-size:20px;height:30px;color:#2d0909' onchange='stockprincipal(this.value);'><option value='0' selected>Stock</option><option value='1'>Annexe</option></select></td>
+							</tr>
+						</table>
+						
+					<table style="width:94%;height:auto;background-color:white;border-collapse:collapse;border:2px solid #f35828;" border="1" cellpadding="2" cellspacing="2" ><tr bgcolor="#000" style="height:50px;"><td style="width:20%;" class="texte7">Produit</td><td style="width:10%;" class="texte7">Taille</td><td style="width:10%;" class="texte7">Quantit&eacute; entr&eacute;e</td><td style="width:10%;" class="texte7">Qte Sortie Brut</td><td style="width:15%;" class="texte7">Qte Sortie trans</td><td style="width:10%;" class="texte7">Qte Retourn&eacute;e</td><td style="width:15%;" class="texte7">Qte Dispo</td><td style="width:10%;" class="texte7">Qte Dispos</td></tr></table>
+					
+					
+					
+					
+					
+					
+					<div id="wrapper10">
+			<div id="scroller10">		
+				<div style='height:auto;visibility:visible' id='scroller100'>
+					
+				</div>
+			</div>
+	<br /><br />	</div>
+				</div>
+		</div>
+		</div>
+		
+		
+		
+		<div id='section1' style='visibily:hidden;height:auto;'>
+
+		<div style='margin-left:auto;margin-right:auto;padding-left:auto;padding-left:auto;padding-top:28px;width:100%'>		
+			<div style='width:69%;float:left;background-color:white;height:590px;'>		
+				<div style='height:310px;clear:both;background-color:#fff;visibility:hidden' id='listeproduit'>
+					
+							<input type='hidden' value='0' id='montotal'><input type='hidden' value='0' id='montva'>
+				<div style='padding-top:10px;height:50px;clear:both;background-color:black;color:white'>
+					<div style='width:5%;float:left;'>&nbsp;</div>
+					<div style='width:38%;float:left;'><div style='padding-left:20px;font-size:16px;font-weight:bold;'>Description</div></div>
+					<div style='width:10%;float:left;font-size:16px;font-weight:bold;'>Qt&eacute;</div>
+					<div style='width:15%;float:left;font-size:16px;font-weight:bold;'>Prix unitaire</div>
+					<div style='width:10%;float:left;font-size:16px;font-weight:bold;text-align:left'>Remise</div>
+					<div style='width:15%;float:left;font-size:16px;font-weight:bold;text-align:left' >Total</div>
+					<div style='width:5%;float:left;'>&nbsp;</div></li>
+					
+		
+		
+
+				
+				
+				
+				
+				
+				</div>	
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="produits" style="visiblity:visible;border:1px solid black;height:420px;"><li>
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</li></ul>
+	</div>
+</div>
+
+
+
+
+		
+		
+		
+				</div>
+				
+				<div style='width:100%;clear:both;height:35px;background-color:#595858;'>
+
+
+<div style='width:410px;float:left;'>&nbsp;</div>
+<!--<div style='width:40px;float:left;padding-top:5px;' align='center'><a href="#" onclick="menu.open();"><img src='icones/calculatrice.png' /></a></div>
+<div style='width:40px;float:left;padding-top:5px;' align='center'><a href="#" onclick="menu.close();"><img src='icones/calculatrice.png' /></a></div>-->
+<div style='width:40px;float:left;padding-top:5px;' align='center'><img src='icones/export_stock.png' style='width:28px;'onclick='showRecords2s();'/></div>
+<div style='width:40px;float:left;padding-top:5px;' align='center'><img src='icones/mises.png' style='width:28px;'onclick='mise();'/></div>
+<div style='width:40px;float:left;padding-top:5px;' align='center'><img src='icones/mise.png' style='width:28px;'onclick='showRecords1s();'/></div>
+<div style='width:40px;float:left;padding-top:5px;' align='center'><a href="#" id='poverclientnew'><img src='icones/client+.png' onclick='newclientb();'/></a></div>
+<div style='width:40px;float:left;padding-top:5px;' align='center'><a href="#" id="poverclients" ><img src='icones/client.png' onclick='listeclients();' /></a></div>
+<div style='width:40px;float:left;padding-top:5px;' align='center'><a href="#calculatrices"><img src='icones/calculatrice.png' /></a></div>
+<div style='width:30px;float:left;'  id="clientss">&nbsp;</div>
+
+
+				
+				</div>
+				
+				
+				<div style='width:100%;clear:both;height:255px;background-color:#c9c9c9'>
+					
+					<div style='padding:10px;' id='sousfamille'>
+				
+				&nbsp;
+	</div>
+	
+	
+				</div>
+				
+			</div>
+			<div style='width:1%;float:left;background-color:#6b1416;height:590px'>&nbsp;</div>
+			
+			
+			<div style='width:30%;float:left;background-color:#6b1416;height:590px'>
+				<div style='width:100%;clear:both;height:310px;background-color:none;padding:4px 2px 4px 4px;'>
+				
+				
+				
+					<div class="boutton2" >
+		
+			<!--<div style='text-align:left;padding-left:10px;padding-top:3px;color:white;font-size:12px;font-weight:bold;clear:both;' id='caissiere'>Caissi&egrave;re : Soufiane BARAKAT</div>-->
+			<div style='width:290px;clear:both;padding-top:3px;'>
+				<div style='text-align:left;color:white;font-size:12px;font-weight:bold;float:left;width:170px;padding-left:10px' id='caissiere'>CAISSIER : ?</div>
+				<div style='text-align:right;padding-right:10px;color:white;font-size:12px;font-weight:bold;float:left;width:100px;' id='mee'>ME : 0.00 DHs</div>
+			</div>
+			<div style='text-align:right;padding-right:60px;color:white;padding-top:8px;font-size:34px;font-weight:bold;clear:both;' id='total'>0.00 DHs </div>
+			<div style='text-align:right;padding-right:60px;padding-top:0px;color:white;font-size:10px;font-weight:light;clear:both;' id='tva'>CF : 0.00 DHs </div>
+			<div style='width:290px;clear:both;padding-top:17px;'>
+				<div style='text-align:left;color:white;font-size:12px;font-weight:bold;float:left;width:140px;padding-left:10px' id='livrecommande'>SUR PLACE</div>
+				<div style='text-align:right;padding-right:10px;color:white;font-size:12px;font-weight:bold;float:left;width:130px;' id='clientcommande'>Client : ?</div>
+			</div>
+		
+		
+		
+	</div>
+	
+	
+	
+      
+	<div style='padding:5px 0px 5px 0px;'>
+		<div style='width:35px;float:left;'><p style='width:35px;height:40px;'><a class="super button15sss pink" href="javascript:validerpaye(0,'cf','emp')" style='font-size:24px;font-weight:bold;color:#fff;letter-spacing:2px;' >F</a></p></div>
+		<div style='width:15px;float:left;'>&nbsp;</div>
+		<div style='width:45px;float:left;'><p style='width:45px;height:40px;'><a class="super button15 pink" href="javascript:validerpaye(0,'cb','emp')" style='font-size:24px;font-weight:bold;color:#fff;letter-spacing:2px;' >CB</a></p></div>
+		<div style='width:15px;float:left;'>&nbsp;</div>
+		
+		<div style='width:50px;float:left;'><p style='width:50px;height:40px;' ><a class="super button15s pink"  href="#" onclick="verifpaye('esp')" style='font-size:24px;font-weight:bold;color:#9a0622;letter-spacing:2px;' id='poverespeces'>ESP</a></p></div>
+		<div style='width:20px;float:left;'>&nbsp;</div>
+		<div style='width:100px;float:left;'><p style='width:95px;height:40px;'><a class="super button15ss pink" href='#' onclick="verifpaye('autre')"  style='font-size:24px;font-weight:bold;color:#000;text-align:left'  id='poverpayeravancer'>AUTRES</a></p></div>
+	</div>
+	<div style='height:5px;clear:both;'>&nbsp;</div>
+	
+
+	<div style='padding:5px 0px 5px 0px;'>
+		<div style='width:125px;float:left;'><p style='width:125px;height:40px;'><a class="super button151 pink" href="#" style='font-size:16px;font-weight:bold;color:#fcb614;letter-spacing:1px;' onclick='modelivrer(2)'>SUR PLACE</a></p></div>
+		<div style='width:21px;float:left;'>&nbsp;</div>
+		<div style='width:125px;float:left;'><p style='width:125px;height:40px;'><a class="super button151 pink"  href="#" style='font-size:16px;font-weight:bold;color:#fcb614;letter-spacing:1px;' onclick='modelivrer(1)'>A EMPORTER</a></p></div>
+	</div>
+	
+	<div style='height:3px;clear:both;'>&nbsp;</div>
+	
+
+	<div style='padding:5px 0px 5px 0px;'>
+		<div style='width:275px;float:left;'><p style='width:275px;height:40px;'><a class="super fidelite pink" href="#" style='font-size:18px;font-weight:bold;color:#fff;letter-spacing:5px' id='fidelite' >CARTE DE FIDELITE</a></p></div>
+	</div>
+	
+	<!--<div style='padding:65px 0px 5px 0px;' ></div>-->
+	
+	<div style='visibility:hidden;' id='familll'>&nbsp;</div>
+	
+	
+	
+	</div>
+	
+				<div style='width:100%;clear:both;height:20px;text-align:center;font-weight:bold;color:white;font-size:15px;font-family:arial' id='miseajour'>&nbsp;</div>
+				
+				<div style='width:100%;clear:both;height:290px;background-color:none;' id='gallery'>
+			
+						
+						<div id="slider" style="overflow: hidden;"><ul style="list-style: none; margin: 0px; width: 606px; -webkit-transition: 0ms; -webkit-transform: translate3d(0px, 0, 0);"> <li style="display: table-cell; width: 303px; vertical-align: top;" id="liste01"><img src='pictures/loadinglargeur.gif' style='border:0px;' /></li> <li style="display: table-cell; width: 303px; vertical-align: top;" id="liste02"><img src='pictures/loadinglargeur.gif' style='border:0px;' /></li></ul></div><nav id='navi'>
+						&nbsp;
+						</nav>
+						
+						
+						
+						
+				</div>
+			</div>		
+		</div>
+
+</div>
+
+
+
+				
+				</section>
+			
+			
+		</div>
+	
+		<div id="navmenu">
+			<header>
+				<h1>Param&eacute;trage</h1>
+			</header>
+				<ul id='parametress'>
+					<!--<li><a href="#" id="menu-btn" onclick='hotdog(1);produitpanier();'>Votre caisse</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(2);mesventes();'>Liste des ventes</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(3);mesproduits();'>Liste des produits</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(4);mesproduits();'>Commandes en ligne</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(5);'>G&eacute;olocalisation</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(6);malisteclient();'>Liste des clients</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(7);rechargercf(0);'>Recharger une CF</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(8);listfournisseur();'>Saisi des entr&eacute;es</a></li>
+					<li><a href="#" id="menu-btn" onclick='etatbon(0);hotdog(9);mesmagasins();'>Saisi des B.S.</a></li>
+					<li><a href="#" id="menu-btn" onclick='etatbon(1);hotdog(9);mesmagasins();'>Saisi des B.R.</a></li>					
+					<li><a href="#" id="menu-btn" onclick='hotdog(11);stockprincipal(0);'>Stock Principal</a></li>
+					<li><a href="#" id="menu-btn" onclick='hotdog(10);monmagap();stockmagasin();'>Stock Magasin</a></li>
+					<li><a id="menu-btn" href="javascript:deconnexionverifuser()" onclick="deconnexionverifuser();" >Se d&eacute;connecter</a></li>-->
+				</ul>
+		</div>
+	</div>
+	
+	
+	<!-- produitstock();-->
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type='text/javascript' src='http://www.linaweb.ma/hotdog/dog/export.php?t=1368009620'></script>
+<script src='js/action.js?t=<?php echo time(); ?>'></script>	
+<script src='js/ajax.js?t=<?php echo time(); ?>'></script>	
+
+
+	
+	
+
+<script type='text/javascript'>
+function loae()
+{
+
+//alert(document.getElementById('scroller').innerHTML);
+var paper ='';
+for(a=1;a<=10;a++) {
+//paper += '<li style="padding-bottom:5px;background:none;height:35px;visibility:visible;border-left:1px solid black;border-right:1px solid black" ><div style="width:100%;clear:both;">&nbsp;</div></div></li>';
+}
+document.getElementById('produits').innerHTML=paper;
+
+//document.getElementById('liste01').innerHTML='<div style="padding:0px;"><table border="0"><tbody><tr><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(1,1)" style="color:#fff;line-height:20pt">Favoris</a></p></td><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(2,0)" style="color:#fff;line-height:20pt">Saucisses</a></p></td></tr><tr><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(3,0)" style="color:#fff;line-height:20pt">Condiments</a></p></td><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(4,0)" style="color:#fff;line-height:20pt">Sauces</a></p></td></tr><tr><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(5,0)" style="color:#fff;line-height:20pt">Accompagnement</a></p></td><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(6,0)" style="color:#fff;line-height:20pt">Salade</a></p></td></tr><tr><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(7,0)" style="color:#fff;line-height:20pt">Boisson</a></p></td><td style="padding-left:2px;padding-right:5px;padding-bottom:2px;"><p style="width:135px;height:35px;"><a class="super button10 pink" href="javascript:showsousfamille(8,0)" style="color:#fff;line-height:20pt">Dessert</a></p></td></tr></tbody></table></div>';
+
+
+}
+
+		</script>
+		
+		
+
+<script src="swipe.js"></script>
+<script>
+
+// slider
+var slider = new Swipe(document.getElementById('slider'), {
+      callback: function(e, pos) {
+        
+        var i = bullets.length;
+        while (i--) {
+          bullets[i].className = ' ';
+        }
+        bullets[pos].className = 'on';
+
+      }
+    }),
+    bullets = document.getElementById('position').getElementsByTagName('em'),
+
+// tabs
+    tabs = new Swipe(document.getElementById('tabs'), {
+      callback: function(event,index,elem) {
+        setTab(selectors[index]);
+      }
+    }),
+    selectors = document.getElementById('tabSelector').children;
+
+for (var i = 0; i < selectors.length; i++) {
+  var elem = selectors[i];
+  elem.setAttribute('data-tab', i);
+  elem.onclick = function(e) {
+    e.preventDefault();
+    setTab(this);
+    tabs.slide(parseInt(this.getAttribute('data-tab'),10),300);
+  }
+}
+
+function setTab(elem) {
+  for (var i = 0; i < selectors.length; i++) {
+    selectors[i].className = selectors[i].className.replace('on',' ');
+  }
+  elem.className += ' on';
+}
+
+// url bar hiding
+(function() {
+    
+  var win = window,
+      doc = win.document;
+
+  // If there's a hash, or addEventListener is undefined, stop here
+  if ( !location.hash || !win.addEventListener ) {
+
+    //scroll to 1
+    window.scrollTo( 0, 1 );
+    var scrollTop = 1,
+
+    //reset to 0 on bodyready, if needed
+    bodycheck = setInterval(function(){
+      if( doc.body ){
+        clearInterval( bodycheck );
+        scrollTop = "scrollTop" in doc.body ? doc.body.scrollTop : 1;
+        win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+      } 
+    }, 15 );
+
+    if (win.addEventListener) {
+      win.addEventListener("load", function(){
+        setTimeout(function(){
+          //reset to hide addr bar at onload
+          win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+        }, 0);
+      }, false );
+    }
+  }
+
+})();
+
+
+
+</script>
+
+ <script type="text/javascript">
+
+
+	  
+	    $('#poverremise').popover({header: '#header2', content: '#content2', preventBottom: true, preventTop: true});
+		$('#povermaremise').popover({header: '#header2', content: '#content2', preventRight: true, preventLeft: true});
+		$('#poverlisteremise').popover({header: '#header7', content: '#content7', preventRight: true, preventLeft: true});
+		$('#poverclientnew').popover( {header: '#header3', content: '#content3', preventBottom: true,preventRight: true, preventTop: true});
+		$('#poverclients').popover({header: '#header4', content: '#content4', preventRight: true,preventLeft: true});
+		$('#poverticket').popover({header: '#header5', content: '#content5', preventRight: true, preventLeft: true});
+		$('#poverpayeravancer').popover({header: '#header6', content: '#content6', preventBottom: true,preventTop: true});
+		$('#poverespeces').popover({header: '#header8', content: '#content8', preventBottom: true,preventTop: true});
+		$('#fidelite').popover({header: '#header9', content: '#content9', preventBottom: true,preventTop: true});
+		$('#rechargefidelite').popover({header: '#header10', content: '#content10', preventBottom: true,preventTop: true});
+		
+		
+	   /*
+	
+			$('.box').popover({header: '#header5', content: '#content5', id: 'box-popover', 
+					live: true, openEvent: function() {
+						$("<div class='test-but box' id='box2'>Live button - Click me</div>").appendTo('body');
+					}
+			});	*/
+    </script> 
+<script>
+jQuery.fn.oneFingerScroll = function() {
+    var scrollStartPos = 0;
+    $(this).bind('touchstart', function(event) {
+        // jQuery clones events, but only with a limited number of properties for perf reasons. Need the original event to get 'touches'
+        var e = event.originalEvent;
+        scrollStartPos = $(this).scrollTop() + e.touches[0].pageY;
+        e.preventDefault();
+    });
+    $(this).bind('touchmove', function(event) {
+        var e = event.originalEvent;
+        $(this).scrollTop(scrollStartPos - e.touches[0].pageY);
+        e.preventDefault();
+    });
+    return this;
+};
+
+
+$(function() {
+    $('#scrollMe').oneFingerScroll();
+});
+</script>
+ 
+
+</body></html>

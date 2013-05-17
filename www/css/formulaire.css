@@ -1,0 +1,240 @@
+.client
+{
+        width:500px;
+        height:auto;
+        background-color:none;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.client td
+{
+        height:16.66%;
+}
+
+.listeclient
+{
+        width:900px;
+        height:300px;
+        background-color:red;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.listeclient td
+{
+        height:16.66%;
+}
+
+.listeremise
+{
+        width:900px;
+        height:300px;
+        background-color:red;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.listeremise td
+{
+        height:16.66%;
+}
+
+
+
+
+
+.payer
+{
+        width:900px;
+        height:auto;
+        background-color:#e4e1d7;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.payer td
+{
+        height:16.66%;
+}
+
+.reduction
+{
+        width:400px;
+        height:auto;
+        background-color:#000;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.reduction td
+{
+        height:16.66%;
+}
+
+
+.ticket
+{
+        width:300px;
+        height:auto;
+        background-color:#fff;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.ticket td
+{
+        height:16.66%;
+}
+
+
+
+.maremise
+{
+        width:500px;
+        height:auto;
+        background-color:#000;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+}
+.maremise td
+{
+        height:16.66%;
+}
+
+
+.monmap
+{
+        width:600px;
+        height:auto;
+        background-color:#fff;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+		z-index:9999999;
+}
+.monmap td
+{
+        height:16.66%;
+}
+
+.infoproduitbt
+{
+        width:600px;
+        height:auto;
+        background-color:#fff;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+		z-index:9999999;
+}
+.infoproduitbt td
+{
+        height:16.66%;
+}
+
+.ticketvente1
+{
+        width:600px;
+        height:auto;
+        background-color:#fff;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+		z-index:9999999;
+}
+.ticketvente1 td
+{
+        height:16.66%;
+}
+
+
+.ticketvente2
+{
+        width:500px;
+        height:auto;
+        background-color:#fff;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+		z-index:9999999;
+}
+.ticketvente2 td
+{
+        height:16.66%;
+}
+
+.ticketvente3
+{
+        width:700px;
+        height:auto;
+        background-color:#fff;
+        border:0px solid #240708;
+        margin:auto;
+        padding-left:5px;
+        padding-bottom:5px;
+		z-index:9999999;
+}
+.ticketvente3 td
+{
+        height:16.66%;
+}
+
+
+input  {
+		font-family: Arial, sans-serif;
+		  border:1px solid #ccc;
+		  font-size:14px;
+		  width:400px;
+		  min-height:30px;
+		  display:block;
+		  margin-bottom:15px;
+		  margin-top:5px;
+		  outline: none;
+
+		  -webkit-border-radius:5px;
+		  -moz-border-radius:5px;
+		  -o-border-radius:5px;
+		  -ms-border-radius:5px;
+		  border-radius:5px;
+}
+
+select  {
+		font-family: Arial, sans-serif;
+		  border:1px solid #ccc;
+		  font-size:14px;
+		  width:400px;
+		  min-height:40px;
+		  display:block;
+		 
+		  outline: none;
+
+		  -webkit-border-radius:5px;
+		  -moz-border-radius:5px;
+		  -o-border-radius:5px;
+		  -ms-border-radius:5px;
+		  border-radius:5px;
+}
+
+:required {
+		  border-color: #88a;
+		  -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		  -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		  -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		  -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		  box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+		}
+		
+	

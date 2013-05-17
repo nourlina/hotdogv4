@@ -1,0 +1,115 @@
+html{
+	margin:0;
+	padding:0;
+	height: 100%;
+	width:100%;
+}
+body {
+	line-height: 1.5em;
+	font-family: Helvetica;
+	margin:0;
+	padding:0;
+	min-height: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+li {
+	list-style-type: none;
+	font-size: 14px;
+	padding: 5px 5px 5px 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+header {
+	background-color: #a0a0a0; 
+	width: 100%;
+	height: 45px;
+	padding: 0;
+	z-index:999;
+}
+
+header h3 {
+	margin: 0 auto;
+	padding: 0;
+	width: 230px;
+	white-space: nowrap;
+	font-weight: normal;
+	text-align:center;
+	clear: both;
+	position:relative;
+	left: 0px;
+	top: -30px;
+}
+
+#binder {
+	background-color: #ffffff;
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	float: left;
+	left: 0;
+	position: static;
+	overflow: hidden;
+}
+
+#slider {
+	padding:0;
+	width: 100%;
+	height:100%;
+	position: relative;
+	left:0;
+	top:0;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;	
+	transition:all 0.4s ease-in-out;
+}
+
+.block {
+	padding: 0;
+	margin: 0;
+    background: white; 
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+	
+#menu-page, #menu-page2{
+	background-color: #f0f0f0;
+}
+
+#navBar li a,  
+#navBar li a:visited,  
+#navBar li a:hover{
+	text-decoration: none;
+	display: block;
+	width: 100%;
+}
+
+.menuPic {
+	background-color: white;
+	background-position: top left;
+	margin:0 0 0 10px;
+	padding: 0;
+	position: relative;
+    top: 5px;
+	display: block;
+	height: 35px;
+	width: 53px;
+	cursor: pointer;
+}
+
+.back {
+	top: 5px;
+	margin:0 0 0 10px;
+	padding: 3px 0 0 3px;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 35px;
+    cursor: pointer;
+}

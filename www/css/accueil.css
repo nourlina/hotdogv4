@@ -1,0 +1,201 @@
+@-webkit-keyframes intro {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.8);
+	}
+	100% {
+		opacity: 0.85;
+		-webkit-transform: scale(1);
+	}
+}
+html {
+	background:#370a0c;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover;
+	width: 1024px;/*** old 100% *****/
+	height: 768px;  /*** old 100% *****/
+	position: relative;
+}
+body {
+	margin: 0px;
+	border: none;
+	padding: 0px;
+	font-family: Helvetica, Verdana, Geneva, sans-serif;
+	font-size: 11pt;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1024px;/*** old 100% *****/
+	height: 768px;  /*** old 100% *****/
+	background: #4e0f10;
+	
+}
+
+div#sds-login-dialog-form {
+	-webkit-animation: intro 1s ease-in-out;
+	width: 350px;
+	opacity: 0.85;
+	margin: 0% auto;
+	background-image: linear-gradient(top, #FFF 50%, #EEE 50%);
+	background-image: -o-linear-gradient(top, #FFF 50%, #EEE 50%);
+	background-image: -moz-linear-gradient(top, #FFF 50%, #EEE 50%);
+	background-image: -webkit-linear-gradient(top, #FFF 50%, #EEE 50%);
+	background-image: -ms-linear-gradient(top, #FFF 50%, #EEE 50%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#121212),
+		to(#471211)
+	); 
+	border: 1px solid #fcb614;
+	border-radius: 10px;
+	box-shadow: 10px 5px 20px #333;
+	transition: all 500ms ease;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+}
+
+div#sds-login-dialog-form:hover {
+	opacity: 1;
+	transition: all 500ms ease;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+}
+
+div#sds-login-dialog-form div {
+	padding: 0px;/*20px*/
+	margin: 0px;
+}
+
+div#login-form p {
+	position: relative;
+	width: 80%;
+	height: 30px;
+	margin: 15px auto;
+}
+
+div#login-form p input {
+	margin: 0px;
+	width: 200px;
+	color: #555;
+	outline: none;
+	font-size: 10pt;
+	background: #fff;
+	padding: 5px 5px 5px 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+}
+div#login-form p.username input {
+	padding-left: 30px;
+	background: url(../icones/icone-user_hover.png) no-repeat left center  #fff;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+}
+div#login-form p.username input:hover, div#login-form p.username input:focus {
+	padding-left: 30px;
+	color: #471211;
+	background: url(../icones/icone-user.png) no-repeat left center  #fff;
+	border: 1px solid #471211;
+	box-shadow: 0px 0px 15px #471211;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+}
+div#login-form p.passwd input {
+	padding-left: 30px;
+	background: url(../icones/icone-password_hover.png) no-repeat left center  #fff;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+}
+div#login-form p.passwd input:hover, div#login-form p.passwd input:focus {
+	padding-left: 30px;
+	color: #471211;
+	background: url(../icones/icone-password.png) no-repeat left center  #fff;
+	border: 1px solid #471211;
+	box-shadow: 0px 0px 15px #471211;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+}
+div#login-form p input#login_submit, div#login-form p input[type='checkbox'] {
+	margin: 0px;
+	font-size: 10pt;
+	background: red;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+div#login-form p input[type='checkbox'] {
+	padding: 0px;
+	width: auto;
+	cursor: pointer;
+} 
+div#login-form p.checkbox label {
+	font-size: 9pt;
+	color: #555;
+	cursor: pointer;
+	text-shadow: 1px 1px 0px #fff;
+}
+div#login-form p.checkbox label:hover, div#login-form p.checkbox label:active, div#login-form p.checkbox label:focus {
+	color: #471211;
+}
+div#login-form p.login {
+	width: 70%;
+}
+div#login-form p.mahome {
+	width: 12%;
+}
+div#login-form p.login input#login_submit {
+	width: 100px;
+	position: absolute;
+	right: 0px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 1px 1px 0px #ffca13;
+	background-image: linear-gradient(top, #ffa73e 50%, #ff9101 50%);
+	background-image: -o-linear-gradient(top, #ffa73e 50%, #ff9101 50%);
+	background-image: -moz-linear-gradient(top, #ffa73e 50%, #ff9101 50%);
+	background-image: -webkit-linear-gradient(top, #ffa73e 50%, #ff9101 50%);
+	background-image: -ms-linear-gradient(top, #ffa73e 50%, #ff9101 50%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#8e181b),
+		to(#471211)
+	); 
+	border: 1px solid #ffca13;
+	transition: all 500ms ease;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+}
+div#login-form p.login input#login_submit:hover, div#login-form p.login input#login_submit:active, div#login-form p.login input#login_submit:focus {
+	color: #ffca13;
+	text-shadow: 1px 1px 0px #49a1f0;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+}
+
+

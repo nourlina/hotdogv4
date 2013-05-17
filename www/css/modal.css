@@ -1,0 +1,578 @@
+.main {
+    background: #aaa url(../images/bg.jpg) no-repeat;
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+}
+.panel {
+    background-color: #444;
+    height: 34px;
+    padding: 10px;
+}
+.panel a#login_pop, .panel a#join_pop {
+    border: 2px solid #aaa;
+    color: #fff;
+    display: block;
+    float: right;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+a#login_pop:hover, a#join_pop:hover {
+    border-color: #eee;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 999999999;
+
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background-color: #2e090a;
+    border: 1px solid #fcb614;
+    display: inline-block;
+    left: 50%;
+    opacity: 0;
+    padding: 15px;
+    position: fixed;
+    text-align: justify;
+    top: 10%;
+    visibility: hidden;
+    z-index: 999999999;
+width:auto;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.popup {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+.close {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.close:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.close:hover {
+    background-color:#fcb614;
+}
+
+.closerem {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.closerem:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.closerem:hover {
+    background-color:#fcb614;
+}
+
+
+.closea {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.closea:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.closea:hover {
+    background-color:#fcb614;
+}
+
+.closeax {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.closeax:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.closeax:hover {
+    background-color:#fcb614;
+}
+
+
+.closeaa {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.closeaa:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.closeaa:hover {
+    background-color:#fcb614;
+}
+
+
+.ticketa {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.ticketa:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.ticketa:hover {
+    background-color:#fcb614;
+}
+
+
+.mapa {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px; z-index: 999999999;
+}
+
+.mapa:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9); z-index: 999999999;
+}
+.mapa:hover {
+    background-color:#fcb614;
+}
+
+
+.mapas {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: 0px;
+    width: 80px;
+	right:0px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px; z-index: 999999999;
+}
+
+.mapas:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9); z-index: 999999999;
+}
+.mapas:hover {
+    background-color:#fcb614;
+}
+
+
+.mapass {
+    background-color: red;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    bottom: 50px;
+    width: 120px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px; z-index: 999999999;
+}
+
+.mapass:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9); z-index: 999999999;
+}
+.mapass:hover {
+    background-color:#fcb614;
+}
+
+.maremisesa {
+    background-color: red;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 80px;
+	right:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.maremisesa:before {
+    color: white;
+    content: "Fermer X";
+    font-size: 15px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.maremisesa:hover {
+    background-color:#fcb614;
+}
+
+
+
+.titres {
+    background-color: #2e090a;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 260px;
+	left:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;border:1px solid #fcb614;
+}
+
+.titres:before {
+    color: #fcb614;
+    content: "Nouveau client";
+    font-size: 18px;font-weight:bold;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.titres:hover {
+    background-color:#2e090a;
+}
+
+
+
+.titress {
+    background-color: #2e090a;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+     font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 260px;
+	left:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;border:1px solid #fcb614;
+}
+
+.titress:before {
+    color: #fcb614;
+    content: "Editer le client";
+    font-size: 18px;font-weight:bold;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.titress:hover {
+    background-color:#2e090a;
+}
+
+.titrepayer {
+    background-color: #2a0809;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 260px;
+	left:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;border:1px solid #fcb614;
+}
+
+.titrepayer:before {
+    color: #fff;
+    content: "PAYER";
+    font-size: 22px;font-weight:bold;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.titrepayer:hover {
+    background-color:#000;
+}
+
+.titrecais {
+    background-color: #2a0809;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 260px;
+	left:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;border:1px solid #fcb614;
+}
+
+.titrecais:before {
+    color: #fff;
+    content: "FOND DE CAISSE";
+    font-size: 26px;font-weight:bold;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.titrecais:hover {
+    background-color:#000;
+}
+
+
+.listclieo {
+    background-color: #2a0809;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 360px;
+	left:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;border:1px solid #fcb614;
+}
+
+.listclieo:before {
+    color: #fff;
+    content: "LISTE DES CLIENTS";
+    font-size: 22px;font-weight:bold;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.listclieo:hover {
+    background-color:#000;
+}
+
+
+.listeremiso {
+    background-color: #2a0809;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    font-family:arial;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 360px;
+	left:20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;border:1px solid #fcb614;
+}
+
+.listeremiso:before {
+    color: #fff;
+    content: "LISTE DES REMISES";
+    font-size: 22px;font-weight:bold;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.listeremiso:hover {
+    background-color:#000;
+}
+
+
+.popup p, .popup div {
+    margin-bottom: 10px;
+}
+.popup label {
+    display: inline-block;
+    text-align: left;
+    width: 120px;
+}
+.popup input[type="text"], .popup input[type="password"] {
+    border: 1px solid;
+    border-color: #999 #ccc #ccc;
+    margin: 0;
+    padding: 2px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.popup input[type="text"]:hover, .popup input[type="password"]:hover {
+    border-color: #555 #888 #888;
+}
