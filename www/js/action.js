@@ -3693,7 +3693,7 @@ function deconnexionverifuser()
     sessionStorage.removeItem("idcommandeuserdoglina");
     sessionStorage.removeItem("nomuserclientdoglina");
     document.getElementById("bloc1").style.visibility='visible';
-    document.getElementById("bloc1").style.height='auto';
+    document.getElementById("bloc1").style.height='768px';
     document.getElementById("bloc1").style.width='auto';
     document.getElementById("bloc2").style.visibility='hidden';
     document.getElementById("bloc2").style.height='0px';
