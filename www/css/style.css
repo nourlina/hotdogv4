@@ -24,7 +24,7 @@ ul,ol,h1,h2,h3,h4,h5,h6,p { display: block; }
 
 #w #pagebody header #menu-btn { display: block; float: left; width: 53px; height: 30px; background: url('../icones/parametrage.png') no-repeat; margin-top: 10px; margin-left: 8px;}
 
-#w #pagebody #content { display: block; background: #6b1416; border:8px solid #7f1619; padding: 0px 0px; margin-top: 18px; min-height: 658px; height: 100%; z-index: 9999; } /******************* 752 miniheigh *********************/
+#w #pagebody #content { display: block; background: #6b1416; border:8px solid #7f1619; padding: 0px 0px; margin-top: 18px; min-height: 678px; height: 100%; z-index: 9999; } /******************* 752 miniheigh *********************/
 
 #w #pagebody #content h2 { border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; color: #181818;
 font-family: "Droid Serif", Georgia, serif; font-size: 2.6em; line-height: 1.8em; font-weight: 500; margin-top: 25px; margin-bottom: 25px; padding: 12px 0; text-align: center; }
